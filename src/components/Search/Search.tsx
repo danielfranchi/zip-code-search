@@ -20,11 +20,12 @@ const Search = () => {
             {
             dadosCep && 
             <>
-                <p><strong>Cidade: </strong>{dadosCep?.localidade} - {dadosCep?.uf}</p>
                 <p><strong>Cep: </strong>{dadosCep?.cep}</p>
-                <p><strong>Complemento: </strong>{dadosCep?.complemento}</p>
-                <p><strong>Localidade: </strong>{dadosCep?.localidade}</p>
+                <p><strong>Cidade: </strong>{dadosCep?.localidade} - {dadosCep?.uf}</p>
+                <p><strong>Rua: </strong>{dadosCep.logradouro}</p>
                 <p><strong>Bairro: </strong>{dadosCep?.bairro}</p>
+                {dadosCep.complemento && <p><strong>Complemento:</strong>{dadosCep?.complemento}</p>}
+                
             </>
             } 
         </div>
